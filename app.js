@@ -133,6 +133,7 @@ app.use((err,req,res,next)=>{
     res.status(statuscode).render('error',{err});
    
 })
-app.listen(3000,()=>{
-    console.log("Server is running successfully");
+const port=process.env.PORT || 3000;
+app.listen(port,()=>{
+    console.log(`Server is running successfully on ${port}`);
 })
